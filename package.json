@@ -1,0 +1,31 @@
+{
+  "name": "zeyna-shared",
+  "version": "1.0.0",
+  "description": "Общие Mongoose-модели, типы и константы предметов для Discord-бота и Веб-сайта «Дача Зейна»",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "mongoose": ">=8.0.0"
+  },
+  "devDependencies": {
+    "mongoose": "^9.2.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
